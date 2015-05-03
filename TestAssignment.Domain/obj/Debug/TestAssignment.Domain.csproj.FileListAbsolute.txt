@@ -1,0 +1,14 @@
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.csprojResolveAssemblyReference.cache
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\TestAssignment.Domain.dll.config
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\TestAssignment.Domain.dll
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\TestAssignment.Domain.pdb
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\EntityFramework.dll
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\EntityFramework.SqlServer.dll
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\EntityFramework.xml
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\EntityFramework.SqlServer.xml
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.dll
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.pdb
