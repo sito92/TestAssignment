@@ -1,4 +1,3 @@
-F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.csprojResolveAssemblyReference.cache
 F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\TestAssignment.Domain.dll.config
 F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\TestAssignment.Domain.dll
 F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\TestAssignment.Domain.pdb

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestAssignment.Domain.Models.DomainModels
 {
-    class Suplier
+    public class Suplier
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
