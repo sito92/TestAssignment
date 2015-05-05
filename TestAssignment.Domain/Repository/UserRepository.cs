@@ -9,11 +9,11 @@ using TestAssignment.Domain.Repository.Interfaces;
 
 namespace TestAssignment.Domain.Repository
 {
-    public class ProductRepository:GenericRepository<Product,DataBaseContext>,IProductRepository
+    public class UserRepository : GenericRepository<User, DataBaseContext>, IUserRepository
     {
-        public Product GetProduct(int productId)
+        public User GetUser(int userId)
         {
-            return FindBy(x => x.Id == productId).FirstOrDefault();
+            return FindBy(x => x.Id == userId).FirstOrDefault();
         }
     }
 }

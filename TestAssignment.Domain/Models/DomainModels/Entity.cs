@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestAssignment.Domain.Models.DomainModels
 {
-    public class Suplier:Entity
+    public abstract class Entity
     {
-        public string Name { get; set; }
+        public int Id { get; set; }
     }
 }

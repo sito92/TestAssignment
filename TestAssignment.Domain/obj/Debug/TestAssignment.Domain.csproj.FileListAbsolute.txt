@@ -11,3 +11,6 @@ F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\Microsoft.AspNet.Iden
 F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.dll
 F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.pdb
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.csprojResolveAssemblyReference.cache
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.Migrations.InitializeDataBase.resources
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.csproj.GenerateResource.Cache

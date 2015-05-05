@@ -55,3 +55,10 @@ F:\Projekty\TestAssignment\TestAssignment\bin\Microsoft.Owin.Security.Twitter.xm
 F:\Projekty\TestAssignment\TestAssignment\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 F:\Projekty\TestAssignment\TestAssignment\obj\Debug\TestAssignment.dll
 F:\Projekty\TestAssignment\TestAssignment\obj\Debug\TestAssignment.pdb
+F:\Projekty\TestAssignment\TestAssignment\bin\Ninject.dll
+F:\Projekty\TestAssignment\TestAssignment\bin\Ninject.xml
+F:\Projekty\TestAssignment\TestAssignment\bin\Ninject.Web.Common.dll
+F:\Projekty\TestAssignment\TestAssignment\bin\Ninject.Web.Mvc.dll
+F:\Projekty\TestAssignment\TestAssignment\bin\WebActivatorEx.dll
+F:\Projekty\TestAssignment\TestAssignment\bin\Ninject.Web.Common.xml
+F:\Projekty\TestAssignment\TestAssignment\bin\Ninject.Web.Mvc.xml

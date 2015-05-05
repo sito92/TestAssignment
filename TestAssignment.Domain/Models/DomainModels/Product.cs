@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestAssignment.Domain.Models.DomainModels
 {
-    public class Product
+    public class Product:Entity
     {
-        public int Id { get; set; }
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public int DeliverPeriod { get; set; }

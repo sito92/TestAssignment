@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestAssignment.Domain.Models.DomainModels
 {
-    public class User
+    public class User:Entity
     {
-        public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
     }
