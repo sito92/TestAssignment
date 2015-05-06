@@ -14,11 +14,17 @@ namespace TestAssignment.Controllers
     {
         private const string ErrorMessage = "ErrorMessage";
         private const string Message = "Message";
+
         private readonly IProductRepository productRepository;
-        public ProductController(IProductRepository _productRepository)
+        private readonly ISuplierRepository suplierRepository;
+        private readonly ICategoryRepository categoryRepository;
+        public ProductController(IProductRepository _productRepository, ISuplierRepository _suplierRepository, ICategoryRepository _categoryRepository)
         {
             productRepository = _productRepository;
+            suplierRepository = _suplierRepository;
+            categoryRepository = _categoryRepository;
         }
+
         // GET: Prouct
         public ActionResult Index()
         {
@@ -52,7 +58,8 @@ namespace TestAssignment.Controllers
 
         public ActionResult Add()
         {
-            return View();
+            var viewModel = GetDefaultProductViewModel();
+            return View(viewModel);
         }
         [HttpPost]
         public ActionResult Add(Product product)
@@ -69,7 +76,13 @@ namespace TestAssignment.Controllers
         public ActionResult Edit(int id)
         {
             var productToEdit = productRepository.GetProduct(id);
-            if (productToEdit != null) return View(productToEdit);
+            if (productToEdit != null)
+            {
+                var viewModel = GetDefaultProductViewModel();
+                viewModel.Product = productToEdit;
+                return View(productToEdit);
+            }
+            
 
             TempData[ErrorMessage] = ErrorMessages.ProductNotFound;
             return RedirectToAction("List");
@@ -89,7 +102,11 @@ namespace TestAssignment.Controllers
         public ActionResult Delete(int id)
         {
             var productToDelete = productRepository.GetProduct(id);
-            if (productToDelete == null) return RedirectToAction("List");
+            if (productToDelete == null)
+            {
+                TempData[Message] = ErrorMessages.ProductNotFound;
+                return RedirectToAction("List");
+            }
 
             productRepository.Delete(productToDelete);
             productRepository.SaveChanges();
@@ -118,6 +135,14 @@ namespace TestAssignment.Controllers
             return RedirectToAction("List");
         }
 
-
+        private ProductViewModel GetDefaultProductViewModel()
+        {
+            ProductViewModel viewModel = new ProductViewModel()
+            {
+                AvaibleCategories = new SelectList(categoryRepository.GetAll(), "Id", "Name"),
+                AvaibleSupliers = new SelectList(suplierRepository.GetAll(), "Id", "Name")
+            };
+            return viewModel;
+        }
     }
 }
