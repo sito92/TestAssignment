@@ -44,3 +44,8 @@ F:\Projekty\TestAssignment\TestAssignment.Tests\bin\Debug\Microsoft.Owin.Host.Sy
 F:\Projekty\TestAssignment\TestAssignment.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 F:\Projekty\TestAssignment\TestAssignment.Tests\obj\Debug\TestAssignment.Tests.dll
 F:\Projekty\TestAssignment\TestAssignment.Tests\obj\Debug\TestAssignment.Tests.pdb
+F:\Projekty\TestAssignment\TestAssignment.Tests\bin\Debug\Ninject.Web.Common.dll
+F:\Projekty\TestAssignment\TestAssignment.Tests\bin\Debug\Ninject.dll
+F:\Projekty\TestAssignment\TestAssignment.Tests\bin\Debug\WebActivatorEx.dll
+F:\Projekty\TestAssignment\TestAssignment.Tests\bin\Debug\Ninject.Web.Common.xml
+F:\Projekty\TestAssignment\TestAssignment.Tests\bin\Debug\Ninject.xml

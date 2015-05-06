@@ -9,11 +9,7 @@ namespace TestAssignment.Controllers
 {
     public class HomeController : Controller
     {
-        private IProductRepository productRepository;
-        public HomeController(IProductRepository repository)
-        {
-            productRepository = repository;
-        }
+
         public ActionResult Index()
         {
             return View();
