@@ -11,6 +11,11 @@ F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\Microsoft.AspNet.Iden
 F:\Projekty\TestAssignment\TestAssignment.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.dll
 F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.pdb
-F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.csprojResolveAssemblyReference.cache
 F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.Migrations.InitializeDataBase.resources
 F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.csproj.GenerateResource.Cache
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.Migrations.AspnetIdentity.resources
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.csprojResolveAssemblyReference.cache
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.Migrations.ProductTest.resources
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.Migrations.ProductDataAnnotations.resources
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.Migrations.ProductDataAnnotations1.resources
+F:\Projekty\TestAssignment\TestAssignment.Domain\obj\Debug\TestAssignment.Domain.Migrations.ProductDataAnnotations2.resources

@@ -64,7 +64,12 @@ namespace TestAssignment.Controllers
         [HttpPost]
         public ActionResult Add(Product product)
         {
-            if (!ModelState.IsValid) return View(product);
+            if (!ModelState.IsValid)
+            {
+                ProductViewModel viewModel = GetDefaultProductViewModel();
+                viewModel.Product = product;
+                return View(viewModel);
+            }
 
             productRepository.Add(product);
             productRepository.SaveChanges();
@@ -72,7 +77,12 @@ namespace TestAssignment.Controllers
             TempData[Message] = Messages.ProductAddedSuccess;
             return RedirectToAction("List");
         }
+        [HttpPost]
+        public ActionResult EditAjax(int id)
+        {
 
+            return RedirectToAction("Edit", id);
+        }
         public ActionResult Edit(int id)
         {
             var productToEdit = productRepository.GetProduct(id);
@@ -80,7 +90,7 @@ namespace TestAssignment.Controllers
             {
                 var viewModel = GetDefaultProductViewModel();
                 viewModel.Product = productToEdit;
-                return View(productToEdit);
+                return View(viewModel);
             }
             
 
@@ -90,7 +100,12 @@ namespace TestAssignment.Controllers
         [HttpPost]
         public ActionResult Edit(Product product)
         {
-            if (!ModelState.IsValid) return View(product);
+            if (!ModelState.IsValid)
+            {
+                ProductViewModel viewModel = GetDefaultProductViewModel();
+                viewModel.Product = product;
+                return View(viewModel);
+            }
 
             productRepository.Save(product);
             productRepository.SaveChanges();
@@ -117,7 +132,13 @@ namespace TestAssignment.Controllers
 
         public ActionResult DeleteMultiple(List<int> ids)
         {
+            if (ids == null || !ids.Any())
+            {
+                TempData[ErrorMessage] = ErrorMessages.ProductsNotFound;
+                return RedirectToAction("List");
+            }
             var productsToDelete = productRepository.FindBy(x => ids.Contains(x.Id));
+
             if (productsToDelete == null || !productsToDelete.Any())
             {
                 TempData[ErrorMessage] = ErrorMessages.ProductsNotFound;

@@ -57,6 +57,26 @@
     <Compile Include="Migrations\201505042014205_InitializeDataBase.Designer.cs">
       <DependentUpon>201505042014205_InitializeDataBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505070945378_AspnetIdentity.cs" />
+    <Compile Include="Migrations\201505070945378_AspnetIdentity.Designer.cs">
+      <DependentUpon>201505070945378_AspnetIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505071530145_ProductTest.cs" />
+    <Compile Include="Migrations\201505071530145_ProductTest.Designer.cs">
+      <DependentUpon>201505071530145_ProductTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505071605469_ProductDataAnnotations.cs" />
+    <Compile Include="Migrations\201505071605469_ProductDataAnnotations.Designer.cs">
+      <DependentUpon>201505071605469_ProductDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505071611041_ProductDataAnnotations1.cs" />
+    <Compile Include="Migrations\201505071611041_ProductDataAnnotations1.Designer.cs">
+      <DependentUpon>201505071611041_ProductDataAnnotations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505071612145_ProductDataAnnotations2.cs" />
+    <Compile Include="Migrations\201505071612145_ProductDataAnnotations2.Designer.cs">
+      <DependentUpon>201505071612145_ProductDataAnnotations2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ASPIdentityModels\AccountViewModels.cs" />
     <Compile Include="Models\ASPIdentityModels\IdentityModels.cs" />
@@ -84,6 +104,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505042014205_InitializeDataBase.resx">
       <DependentUpon>201505042014205_InitializeDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505070945378_AspnetIdentity.resx">
+      <DependentUpon>201505070945378_AspnetIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505071530145_ProductTest.resx">
+      <DependentUpon>201505071530145_ProductTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505071605469_ProductDataAnnotations.resx">
+      <DependentUpon>201505071605469_ProductDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505071611041_ProductDataAnnotations1.resx">
+      <DependentUpon>201505071611041_ProductDataAnnotations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505071612145_ProductDataAnnotations2.resx">
+      <DependentUpon>201505071612145_ProductDataAnnotations2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

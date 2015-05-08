@@ -1,0 +1,202 @@
+﻿@using System.Linq
+@model TestAssignment.ViewModels.ProductListViewModel
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div id="page-heading">
+    <h1>Products</h1>
+</div>
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+    <tr>
+        <th rowspan="3" class="sized"><img src="~/images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+        <th class="topleft"></th>
+        <td id="tbl-border-top">&nbsp;</td>
+        <th class="topright"></th>
+        <th rowspan="3" class="sized"><img src="~/images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+    </tr>
+    <tr>
+        <td id="tbl-border-left"></td>
+        <td>
+            <!--  start content-table-inner ...................................................................... START -->
+            <div id="content-table-inner">
+
+                <!--  start table-content  -->
+                <div id="table-content">
+ 
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div id="message-red">
+                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="red-left">@Model.ErrorMessage</td>
+                                    <td class="red-right"><a class="close-red"><img src="~/images/table/icon_close_red.gif" alt="" /></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    }
+                    @if (!string.IsNullOrEmpty(Model.Message))
+                    {
+                        <div id="message-green">
+                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="green-left">@Model.Message</td>
+                                    <td class="green-right"><a class="close-green"><img src="~/images/table/icon_close_green.gif" alt="" /></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    }
+                    <!--  end message-green -->
+                    <!--  start product-table ..................................................................................... -->
+                    <form id="mainform" action="">
+
+
+
+                        <table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
+                            <tr>
+                                <th class="table-header-check"><a id="toggle-all"></a> </th>
+                                <th class="table-header-repeat line-left minwidth-1"><a href="">@Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProductName)</a></th>
+                                <th class="table-header-repeat line-left minwidth-1"><a href="">@Html.DisplayNameFor(model => model.Products.FirstOrDefault().Category.Name)</a></th>
+                                <th class="table-header-repeat line-left"><a href="">@Html.DisplayNameFor(model => model.Products.FirstOrDefault().Price)</a></th>
+                                <th class="table-header-repeat line-left"><a href="">@Html.DisplayNameFor(model => model.Products.FirstOrDefault().DeliverPeriod)</a></th>
+                                <th class="table-header-repeat line-left"><a href="">@Html.DisplayNameFor(model => model.Products.FirstOrDefault().Suplier.Name)</a></th>
+                                <th class="table-header-repeat line-left"><a href="">@Html.DisplayNameFor(model => model.Products.FirstOrDefault().MinStock)</a></th>
+                                <th class="table-header-options line-left"><a href="">Actions</a></th>
+                            </tr>
+
+                            @foreach (var item in Model.Products)
+                            {
+                                <tr>
+                                    <td><input type="checkbox" id="@item.Id"/></td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ProductName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Category.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Price)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DeliverPeriod)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Suplier.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MinStock)
+                                    </td>
+                                    <td class="options-width">
+                                        <a href="@Url.Action("Edit","Product",new {id = item.Id})" title="Edit" class="icon-1 info-tooltip"></a>
+                                        <a href="@Url.Action("Delete","Product",new {id = item.Id})" title="Delete" class="icon-2 info-tooltip"></a>
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </table>
+                        <!--  end product-table................................... -->
+                    </form>
+                </div>
+                <!--  end content-table  -->
+                <!--  start actions-box ............................................... -->
+                <div id="actions-box">
+                    <a href="" class="action-slider"></a>
+                    <div id="actions-box-slider">
+                        <a href="" class="action-edit" onclick="SendIdToEdit()">Edit</a>
+                        <a href="" class="action-delete" onclick="SendIdsToDelete()">Delete</a>
+                        <a href="@Url.Action("Add","Product")" class="action-add">Add</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- end actions-box........... -->
+                <!--  start paging..................................................... -->
+                <!--  end paging................ -->
+
+                <div class="clear"></div>
+
+            </div>
+            <!--  end content-table-inner ............................................END  -->
+        </td>
+        <td id="tbl-border-right"></td>
+    </tr>
+    <tr>
+        <th class="sized bottomleft"></th>
+        <td id="tbl-border-bottom">&nbsp;</td>
+        <th class="sized bottomright"></th>
+    </tr>
+</table>
+<div class="clear">&nbsp;</div>
+
+<script>
+
+
+    $(document).ready(function () {
+        $(".action-add").show();
+        $(".action-delete").hide();
+        $(".action-edit").hide();
+    });
+    function ActionListChange(checkedAmmount) {
+        if (checkedAmmount<=0) {
+            $(".action-add").show();
+            $(".action-delete").hide();
+            $(".action-edit").hide();
+        }
+        if (checkedAmmount==1) {
+            $(".action-add").hide();
+            $(".action-edit").show();
+            $(".action-delete").show();
+           
+        }
+        if (checkedAmmount>1) {
+            $(".action-add").hide();
+            $(".action-edit").hide();
+            $(".action-delete").show();
+        }
+    }
+    function CountCheckedInputs() {
+        var checkedIputs = $('#mainform input[type=checkbox]:checked');
+        return checkedIputs.size();
+    }
+
+    $('#mainform input[type=checkbox]').change(function () {
+        var checked = CountCheckedInputs();
+        ActionListChange(checked);
+        if (checked==1) {
+            ChangeEditHref();
+        }
+    });
+
+    function SendIdsToDelete() {
+        var checkedIputs = $('#mainform input[type=checkbox]:checked');
+        var idsArray = new Array();
+
+        checkedIputs.each(function() {
+            idsArray.push(this.id);
+        });
+
+ 
+        var postData = { ids: idsArray };
+
+            $.ajax({
+                type: "POST",
+                url: "/Product/DeleteMultiple",
+                data: postData,
+                success: function (data) {
+                    alert(data.Result);
+                },
+                dataType: "json",
+                traditional: true
+            });
+        
+    }
+
+    function ChangeEditHref() {
+        var checkedIput = $('#mainform input[type=checkbox]:checked');
+        $(".action-edit").attr("href", "@Url.Action("Edit","Product")" + "/" + checkedIput[0].id);
+    };
+        
+    
+</script>

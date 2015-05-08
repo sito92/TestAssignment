@@ -38,14 +38,14 @@ namespace TestAssignment.Domain.Migrations
                 new Category() { Name = "Vegetables"},
                 new Category() { Name = "Meat"}
                 );
-
+            context.SaveChanges();
             context.Supliers.AddOrUpdate(
                 x=>x.Name,
                 new Suplier() { Name = "Suplier 1"},
                   new Suplier() { Name = "Suplier 2"},
                   new Suplier() { Name = "Suplier 3"}
                 );
-
+            context.SaveChanges();
             context.Products.AddOrUpdate(
                 x => x.ProductName,
                 new Product()
@@ -111,7 +111,7 @@ namespace TestAssignment.Domain.Migrations
                     ProductName = "Tomato",
                     SuplierId = 1
                 });
-
+            context.SaveChanges();
         }
     }
 }
