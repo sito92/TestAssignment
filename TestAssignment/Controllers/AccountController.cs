@@ -203,7 +203,7 @@ namespace TestAssignment.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("List", "Product");
             }
         }
 
