@@ -10,6 +10,7 @@ using TestAssignment.ViewModels;
 
 namespace TestAssignment.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         private const string ErrorMessage = "ErrorMessage";

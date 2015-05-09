@@ -135,10 +135,6 @@ namespace TestAssignment.Controllers
             return RedirectToAction("Manage", new { Message = message });
         }
 
-        //
-        // POST: /Account/LogOff
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
