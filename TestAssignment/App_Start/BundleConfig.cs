@@ -26,7 +26,9 @@ namespace TestAssignment
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/screen.css"));
 
-         
+            bundles.Add(new ScriptBundle("~/bundles/list").Include(
+                "~/Scripts/listHandle.js"
+                ));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862

@@ -12,7 +12,7 @@
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-
+    
     @Html.HiddenFor(model => model.Product.Id)
     <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
         <tr>
@@ -53,8 +53,9 @@
                                         </td>
                                         <td>
                                             @Html.MyValidationMessageFor(model => model.Product.ProductName)
+                                            
                                         </td>
-
+                                     
                                     </tr>
                                     <tr>
                                         <th valign="top">
@@ -163,8 +164,4 @@
     <div class="clear">
         &nbsp;
     </div>
-}
-
-@section Scripts {
-
 }
