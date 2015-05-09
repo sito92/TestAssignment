@@ -138,7 +138,7 @@ namespace TestAssignment.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
         
         protected override void Dispose(bool disposing)
